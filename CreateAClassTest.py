@@ -1,5 +1,5 @@
 class Test:
-    def _init_(self, testname, testduration):
+    def __init__(self, testname, testduration):  # Fixed constructor method name
         self.testname = testname
         self.testduration = testduration
 
@@ -17,5 +17,5 @@ test2duration = int(input().strip())
 test1 = Test(testiname, testiduration)
 test2 = Test(test2name, test2duration)
 
-print(test1.getName() + " + " + test2.getName())
+print(f"{test1.getName()} + {test2.getName()}")  # Improved string concatenation
 print(test1.getDuration() + test2.getDuration())
