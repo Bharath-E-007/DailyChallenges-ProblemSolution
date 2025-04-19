@@ -1,0 +1,17 @@
+boundedArray getColumn(int R, int C, int matrix[][C], int K)
+{
+    struct BoundedArray* result = (struct BoundedArray*)malloc(sizeof(struct BoundedArray));
+    result->arr = (int*)malloc(sizeof(int) * R);
+    result->SIZE = R;
+
+    for (int i = 0; i < R; i++) {
+        result->arr[i] = matrix[i][K - 1];
+    }
+
+    return result;
+}
+/*
+    * The function getColumn takes a 2D array (matrix) and returns a bounded array containing the elements of the K-th column.
+    * It allocates memory for the bounded array and fills it with the values from the specified column of the matrix.
+    * The function assumes that K is a valid column index (1-based).
+*/
